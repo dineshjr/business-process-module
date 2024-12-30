@@ -1,0 +1,222 @@
+/* General Layout */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f6f9;
+}
+.toolbar {
+  padding: 15px 20px;
+  background-color: #ffffff;
+  border-bottom: 2px solid #e0e0e0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+.main-content {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* Modeler and Properties Panels */
+.modeler-container {
+  flex: 1;
+  background-color: #ffffff;
+  border-right: 2px solid #e0e0e0;
+  border-radius: 12px 0 0 12px;
+}
+.properties-container {
+  width: 340px;
+  overflow-y: auto;
+  padding: 25px;
+  background-color: #efefef;  /* Updated background color */
+  box-shadow: -4px 0 10px rgba(0, 0, 0, 0.05);
+  border-radius: 0 12px 12px 0;
+}
+
+/* Property Panels & Inputs */
+.properties-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.property-group {
+  border: 1px solid #e0e0e0;
+  border-radius: 16px;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+.property-section {
+  margin-top: 20px;
+}
+.property-row {
+  margin-bottom: 14px;
+  display: flex;
+  flex-direction: column;
+}
+.property-row label {
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #333;
+  font-size: 14px;
+}
+.property-row input,
+.property-row textarea,
+.property-row select {
+  width: 100%;  /* Ensure full width inside container */
+  box-sizing: border-box; /* Prevent overflow */
+  padding: 12px;
+  border: 1px solid #d1d1d1;
+  border-radius: 8px;
+  background-color: #ffffff;
+  transition: border 0.3s;
+}
+.property-row input:focus,
+.property-row select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Dropdown Customization */
+.property-row select {
+  appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg fill="#555" height="16" viewBox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  padding-right: 32px;
+}
+
+/* Buttons */
+button {
+  padding: 12px 20px;
+  background-color: #007bff;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  transition: background-color 0.3s, transform 0.1s;
+}
+button:hover {
+  background-color: #0056b3;
+  
+}
+button:active {
+  transform: translateY(0);
+}
+
+/* Checkbox Customization */
+/* Checkbox Customization */
+.checkbox-row {
+  display: flex;
+  /* align-items: center; */
+  gap: 10px; /* Adjust spacing between checkbox and label */
+}
+
+.checkbox-row label {
+  display: flex;
+  align-items: center;
+  font-weight: 500; /* Adjust label font weight for consistency */
+  font-size: 14px;  /* Make sure font size matches the rest of the inputs */
+  color: #333; /* Adjust text color for better visibility */
+  cursor: pointer;
+}
+
+.checkbox-row input[type="checkbox"] {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #007bff;
+  border-radius: 4px;
+  display: inline-block;
+  margin-right: 10px; /* Ensure space between checkbox and label */
+  position: relative;
+  vertical-align: middle; /* Align vertically with label */
+}
+
+.checkbox-row input[type="checkbox"]:checked {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.checkbox-row input[type="checkbox"]:checked::before {
+  content: "✔";
+  position: absolute;
+  left: 3px;
+  top: 0px;
+  color: white;
+  font-size: 14px;
+}
+
+/* Autocomplete Enhancements */
+.autocomplete-input {
+  width: 100%;  /* Prevent overflow */
+  box-sizing: border-box;
+  padding: 12px;
+  border: 1px solid #d1d1d1;
+  border-radius: 8px;
+  background-color: #fefefe;
+}
+.autocomplete-suggestions {
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  border: 1px solid #d1d1d1;
+  border-top: none;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.autocomplete-suggestion {
+  padding: 12px;
+  transition: background-color 0.3s;
+}
+.autocomplete-suggestion:hover {
+  background-color: #f1f1f1;
+}
+
+/* BPMN Branding */
+.bjs-powered-by {
+  display: none;
+}
+
+/* Placeholder Text */
+.properties-placeholder {
+  padding: 30px;
+  text-align: center;
+  color: #888;
+}
+
+.separator{
+  display: none;
+}
+
+
+
+.accordion {
+  background-color: #ffffff;
+  color: #444;
+  cursor: pointer;
+  /* padding: 18px; */
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+  height: 40px;
+  display: flex;
+  font-weight: 700;
+  justify-content: space-between;
+}
+
+.active,
+.accordion:hover {
+  background-color: #fff;
+}
+
+.panel {
+  display: none;
+  overflow: hidden;
+}
+
