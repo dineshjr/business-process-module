@@ -390,7 +390,7 @@ const PropertiesPanel = ({ selectedElement, onPropertyChange, modeler }) => {
 
     // Only apply .replace() for string inputs (not checkboxes)
     if (typeof value === "string") {
-      updatedValue = value.replace(/[^a-zA-Z0-9]/g, "");
+      updatedValue = value.replace(/[^a-zA-Z0-9]/g , "");
     }
 
     const updatedProperties = {
@@ -675,6 +675,7 @@ const Modeller = () => {
       link.click();
       URL.revokeObjectURL(link.href);
       console.log("Diagram saved successfully.");
+      localStorage.clear()
     } catch (error) {
       console.error("Error saving diagram:", error);
     }
